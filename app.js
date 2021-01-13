@@ -37,10 +37,11 @@ app.post("/", function(req, res){
     const jsonData = JSON.stringify(data);
 
     const url = "https://us7.api.mailchimp.com/3.0/lists/f5a03a4a32";
-
+    
+    const myKey = config.MY_KEY;
     const options = {
         method:"POST",
-        auth:"saloni2:f7f96bb5f0788f862db5bc6b3798f943-us7"
+        auth:"saloni2:" + myKey
     }
 
    const request = https.request(url, options, function(response){
