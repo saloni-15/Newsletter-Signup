@@ -38,7 +38,8 @@ app.post("/", function(req, res){
 
     const url = "https://us7.api.mailchimp.com/3.0/lists/f5a03a4a32";
     
-    const myKey = config.MY_KEY;
+    const myKey = config.MY_KEY; //mykey is the api key which is kept encrypted here for security reasons.
+
     const options = {
         method:"POST",
         auth:"saloni2:" + myKey
@@ -72,8 +73,3 @@ app.listen(process.env.PORT || 3000, function(){
     console.log("server is running at port 3000");
 });
 
-//api id
-//f7f96bb5f0788f862db5bc6b3798f943-us7
-
-//list id
-//f5a03a4a32
